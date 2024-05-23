@@ -80,13 +80,13 @@ function Cart() {
           <h3>${cart.total}</h3>
         </Badge>
         {user ? (
-          <Link href="/checkout/" onClick={() => setHideCart(true)}>
+          <Link legacyBehavior href="/checkout/" onClick={() => setHideCart(true)}>
             <Button style={{ width: '60%' }} color="dark">
               <a>Order</a>
             </Button>
           </Link>
         ) : (
-          <Link href="/login/">
+          <Link legacyBehavior href="/login/">
             <Button style={{ width: '60%' }} color="dark">
               <a>Sign in and Order</a>
             </Button>

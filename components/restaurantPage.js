@@ -70,7 +70,7 @@ function RestaurantPage({ restId }) {
               <h2 className="py-3"> {data.restaurant.data.attributes.name}</h2>
             </div>
           </div>
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a style={{ color: 'black', fontSize: 35, marginTop: 20 }}>
               <i className="bi-arrow-left-circle text-dark"></i>
             </a>

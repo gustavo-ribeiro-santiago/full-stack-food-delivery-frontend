@@ -78,7 +78,7 @@ function Login(props) {
                       <small>Forgot Password?</small>
                     </a>
                   <br></br>
-                  <Link href="/register">
+                  <Link legacyBehavior href="/register">
                     <small>
                       Don't have an account yet?
                       <a href=""> Sign up</a>

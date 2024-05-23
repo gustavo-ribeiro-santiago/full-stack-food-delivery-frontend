@@ -43,7 +43,7 @@ const Layout = (props) => {
         </style>
         <Nav className="navbar navbar-dark bg-dark">
           <NavItem>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a className="navbar-brand">
                 <i className="bi bi-rocket-takeoff pl-2 pr-3"></i>
                 Rocket Food Delivery
@@ -51,12 +51,12 @@ const Layout = (props) => {
             </Link>
           </NavItem>
           <NavItem className="ml-auto">
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a className="nav-link bg-dark rounded">Home</a>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a className="nav-link bg-dark rounded">About</a>
             </Link>
           </NavItem>
@@ -67,14 +67,14 @@ const Layout = (props) => {
                 {user.username}
               </div>
             ) : (
-              <Link href="/register">
+              <Link legacyBehavior href="/register">
                 <a className="nav-link bg-dark rounded"> Sign up</a>
               </Link>
             )}
           </NavItem>
           <NavItem>
             {user ? (
-              <Link href="/">
+              <Link legacyBehavior href="/">
                 <a
                   className="nav-link bg-dark rounded"
                   onClick={() => {
@@ -86,7 +86,7 @@ const Layout = (props) => {
                 </a>
               </Link>
             ) : (
-              <Link href="/login">
+              <Link legacyBehavior href="/login">
                 <a className="nav-link bg-dark rounded">Sign in</a>
               </Link>
             )}

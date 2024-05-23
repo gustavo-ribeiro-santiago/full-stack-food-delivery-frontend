@@ -5,34 +5,42 @@
   "devFiles": [
     "static/chunks/react-refresh.js"
   ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
     "static/development/_ssgManifest.js"
   ],
+  "rootMainFiles": [],
   "pages": {
     "/": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
     "/[restaurantId]": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/[restaurantId].js"
     ],
     "/_app": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/checkout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/checkout.js"
+    ],
+    "/register": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/register.js"
     ]
   },
   "ampFirstPages": []

@@ -73,7 +73,7 @@ function RestaurantList(props) {
             <CardText>{res.attributes.description}</CardText>
           </CardBody>
           <div className="card-footer">
-            <Link href={`/${res.id}`}>
+            <Link legacyBehavior href={`/${res.id}`}>
               <Button color="dark" className="d-block m-auto px-4">
                 View dishes
               </Button>
