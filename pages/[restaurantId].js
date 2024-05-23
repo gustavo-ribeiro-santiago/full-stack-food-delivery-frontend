@@ -8,7 +8,7 @@ import {
   gql,
   useQuery,
 } from '@apollo/client';
-import RestaurantPage from '../components/RestaurantPage';
+import RestaurantPage from '../components/restaurantPage';
 
 function Restaurant() {
   const router = useRouter();
