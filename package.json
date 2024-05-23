@@ -22,9 +22,6 @@
   },
   "description": "Full food delivery app with Stripe Billing",
   "main": "index.js",
-  "author": "Gustavo Santiagoo",
-  "license": "MIT",
-  "engines": {
-    "node": "18.x"
-  }
+  "author": "jrw@mit.edu",
+  "license": "MIT"
 }
