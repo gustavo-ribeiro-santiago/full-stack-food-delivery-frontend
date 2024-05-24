@@ -56,7 +56,7 @@ const Layout = (props) => {
             </Link>
           </NavItem>
           <NavItem>
-            <Link legacyBehavior href="/">
+            <Link legacyBehavior href="/about">
               <a className="nav-link bg-dark rounded">About</a>
             </Link>
           </NavItem>
