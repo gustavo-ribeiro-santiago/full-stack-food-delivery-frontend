@@ -1,5 +1,5 @@
 {
-  "name": "restaurant-app",
+  "name": "rocket-food-delivery-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,7 @@
     "react-dom": "^18.3.1",
     "reactstrap": "^8.6.0"
   },
-  "description": "Full food delivery app with Stripe Billing",
+  "description": "Full stack food delivery app with Stripe Billing",
   "author": "Gustavo Santiagoo",
   "license": "MIT",
   "engines": {
