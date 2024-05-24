@@ -115,7 +115,7 @@ const Register = () => {
                     </small>
                   </FormGroup>
                   <div style={{ marginBottom: 20 }}>
-                    By continuing, you agree with our <a>Terms of Use</a>.
+                    By continuing, you agree with our <a href="">Terms of Service</a> and our <a href="">Privacy Policy</a>.
                   </div>
                   <FormGroup>
                     <Button
@@ -169,7 +169,8 @@ const Register = () => {
               0px 1px 1px 0px rgba(0, 0, 0, 0.14),
               0px 2px 1px -1px rgba(0, 0, 0, 0.12);
             border-radius: 6px;
-            margin-top: 60px;
+            margin-top: 8px;
+            margin-bottom: 0px;
           }
           .notification {
             color: #ab003c;
@@ -182,7 +183,7 @@ const Register = () => {
             border-radius-top: 6px;
           }
           .wrapper {
-            padding: 20px 30px 20px 30px !important;
+            padding: 20px 30px 10px 30px !important;
           }
           a {
             color: blue !important;
