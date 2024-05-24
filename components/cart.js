@@ -105,7 +105,7 @@ function Cart() {
         right: 0,
         top: 0,
         height: '100vh',
-        paddingTop: 60,
+        paddingTop: 70,
       }}
       className="bg-dark rounded"
     >
@@ -121,8 +121,8 @@ function Cart() {
           onClick={() => setHideCart(true)}
         >
           <i
-            className="bi bi-arrow-right-circle text-white m-2"
-            style={{ background: 'none' }}
+            className="bi bi-arrow-right-circle text-white m-2 mt-3"
+            style={{ background: 'none', fontSize: 22 }}
           ></i>
         </button>
       </div>

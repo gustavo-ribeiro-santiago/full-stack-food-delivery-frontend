@@ -15,6 +15,23 @@ a {
   box-sizing: border-box;
 }
 
+button.navbar-toggler {
+  padding: 0.25rem;
+}
+
+a.navbar-brand {
+  padding: 5 0 0 0;
+}
+
+li.nav-item {
+  margin-left: auto;
+  /* margin-right: auto; */
+}
+
+div.collapse.show {
+  display: flex;
+}
+
 .section {
   margin-bottom: 30px;
 }

@@ -7,34 +7,35 @@ import Link from 'next/link';
 function RestaurantPage({ restId }) {
   const [query, setQuery] = useState('');
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
 
   const GET_RESTAURANT_DATA = gql`
-  query($id: ID!) {
-    restaurant(id: $id) {
-      data {
-        id
-        attributes {
-          name
-          description
-          image {
-            data {
-              attributes {
-                url
+    query ($id: ID!) {
+      restaurant(id: $id) {
+        data {
+          id
+          attributes {
+            name
+            description
+            image {
+              data {
+                attributes {
+                  url
+                }
               }
             }
-          }
-          dishes {
-            data {
-              id
-              attributes {
-                name
-                description
-                price
-                image {
-                  data {
-                    attributes {
-                      url
+            dishes {
+              data {
+                id
+                attributes {
+                  name
+                  description
+                  price
+                  image {
+                    data {
+                      attributes {
+                        url
+                      }
                     }
                   }
                 }
@@ -44,7 +45,6 @@ function RestaurantPage({ restId }) {
         }
       }
     }
-  }
   `;
 
   const { loading, error, data } = useQuery(GET_RESTAURANT_DATA, {
@@ -55,7 +55,7 @@ function RestaurantPage({ restId }) {
   if (error) return <p>ERROR here</p>;
   if (!data) return <p>Not found</p>;
 
-  console.log(JSON.stringify(data))
+  console.log(JSON.stringify(data));
 
   return (
     <>
@@ -63,7 +63,10 @@ function RestaurantPage({ restId }) {
         <div className="d-flex" style={{ justifyContent: 'space-between' }}>
           <div className="d-flex">
             <img
-              src={API_URL + data.restaurant.data.attributes.image.data.attributes.url}
+              src={
+                API_URL +
+                data.restaurant.data.attributes.image.data.attributes.url
+              }
               style={{ height: 50, width: 50, marginTop: 20 }}
             ></img>
             <div className="mx-3 my-2">
@@ -86,7 +89,10 @@ function RestaurantPage({ restId }) {
         </InputGroup>
         <br></br>
       </div>
-      <Dishes dishes={data.restaurant.data.attributes.dishes}></Dishes>
+      <Dishes
+        dishes={data.restaurant.data.attributes.dishes}
+        query={query}
+      ></Dishes>
     </>
   );
 }

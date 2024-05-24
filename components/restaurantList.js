@@ -16,9 +16,7 @@ import {
   Col,
 } from 'reactstrap';
 
-function RestaurantList(props) {
-  const { cart } = useContext(AppContext);
-  const [state, setState] = useState(cart);
+function RestaurantList({ search }) {
   const GET_RESTAURANTS = gql`
     query {
       restaurants {
@@ -45,18 +43,12 @@ function RestaurantList(props) {
   if (!data) return <p>Not found</p>;
   console.log(`Query Data: ${data.restaurants.data[0].attributes.name}`);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
 
   let searchQuery = data.restaurants.data.filter((res) => {
-    return res.attributes.name.toLowerCase().includes(props.search);
+    return res.attributes.name.toLowerCase().includes(search);
   });
 
-  let restId = searchQuery[0].id;
-
-  // definet renderer for Dishes
-  const renderDishes = (restaurantID) => {
-    return <Dishes restId={restaurantID}> </Dishes>;
-  };
   if (searchQuery.length > 0) {
     const restList = searchQuery.map((res) => (
       <Col key={res.id}>
