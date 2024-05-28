@@ -24,6 +24,7 @@ function Login(props) {
   const appContext = useContext(AppContext);
 
   useEffect(() => {
+    setHideCart(true);
     if (appContext.isAuthenticated) {
       router.push('/'); // redirect if you're already logged in
     }
@@ -73,17 +74,17 @@ function Login(props) {
                     />
                   </FormGroup>
 
-                  <div style={{ marginBottom:15 }}>
+                  <div style={{ marginBottom: 15 }}>
                     <a href="">
                       <small>Forgot Password?</small>
                     </a>
-                  <br></br>
-                  <Link legacyBehavior href="/register">
-                    <small>
-                      Don't have an account yet?
-                      <a href=""> Sign up</a>
-                    </small>
-                  </Link>
+                    <br></br>
+                    <Link legacyBehavior href="/register">
+                      <small>
+                        Don't have an account yet?
+                        <a href=""> Sign up</a>
+                      </small>
+                    </Link>
                   </div>
                   <FormGroup>
                     <Button

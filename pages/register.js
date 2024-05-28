@@ -26,6 +26,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
   const appContext = useContext(AppContext);
+  useEffect(() => setHideCart(true), []);
   return (
     <Container>
       <Row>
@@ -115,7 +116,9 @@ const Register = () => {
                     </small>
                   </FormGroup>
                   <div style={{ marginBottom: 20 }}>
-                    By continuing, you agree with our <a href="">Terms of Service</a> and our <a href="">Privacy Policy</a>.
+                    By continuing, you agree with our{' '}
+                    <a href="">Terms of Service</a> and our{' '}
+                    <a href="">Privacy Policy</a>.
                   </div>
                   <FormGroup>
                     <Button
@@ -143,7 +146,9 @@ const Register = () => {
                             console.log(
                               `registered user: ${JSON.stringify(res.data)}`
                             );
-                            alert(`Welcome, ${data.firstName}! Your account at Rocket Food Delivery was created successfully!`)
+                            alert(
+                              `Welcome, ${data.firstName}! Your account at Rocket Food Delivery was created successfully!`
+                            );
                           })
                           .catch((error) => {
                             console.log(`error in register: ${error}`);
