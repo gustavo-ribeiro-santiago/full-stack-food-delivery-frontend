@@ -26,7 +26,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
   const appContext = useContext(AppContext);
-  useEffect(() => setHideCart(true), []);
+  useEffect(() => appContext.setHideCart(true), []);
   return (
     <Container>
       <Row>

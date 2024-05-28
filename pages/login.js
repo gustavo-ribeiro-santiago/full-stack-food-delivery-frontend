@@ -24,7 +24,7 @@ function Login(props) {
   const appContext = useContext(AppContext);
 
   useEffect(() => {
-    setHideCart(true);
+    appContext.setHideCart(true);
     if (appContext.isAuthenticated) {
       router.push('/'); // redirect if you're already logged in
     }
