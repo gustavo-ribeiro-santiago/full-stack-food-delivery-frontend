@@ -55,7 +55,7 @@ const Layout = (props) => {
             }
           `}
         </style>
-        <Navbar expand="lg" container="fluid" className="navbar-dark bg-dark">
+        <Navbar collapseOnSelect expand="lg" container="fluid" className="navbar-dark bg-dark">
           <NavbarBrand>
             <Link legacyBehavior href="/">
               <a className="navbar-brand mr-0">
